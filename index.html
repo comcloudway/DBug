@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DBug</title>
+  <script src="js/bridge.js"></script>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body onload="window.location='#inspect'">
+  
+  <iframe onload="DBUG()" id="src" src="test.html"></iframe>
+  
+  <div class="box">
+    
+    <div class="view" id='inspect'></div>
+    <div class="view" id='log'></div>
+    <div class="view" id='console'>
+      <input placeholder="Type a command here..." type="text" onkeydown="execute(this)"/>
+     
+    </div>
+    
+    <div class="bottombar">
+      
+    <a onclick="focusBB('inspect')" id="btn_inspect" class="highlight" href="#inspect">Inspect</a>
+    
+      <a onclick="focusBB('log')" id="btn_log" href="#log">Log</a>
+      
+      <a onclick="focusBB('console')" id="btn_console" href="#console">Console</a>
+      
+    </div>
+    
+  </div>
+  <script src="js/ui.js"></script>
+</body>
+
+</html>
