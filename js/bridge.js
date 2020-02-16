@@ -21,6 +21,7 @@ const DBUG = () => {
            e.innerText = m
            document.getElementById("log").appendChild(e)
          }}
+         document.getElementById("inspect").innerText="<html>\n"+win.document.documentElement.innerHTML+"\n</html>"
     }, 500);
     
     document.getElementById("inspect").innerText="<html>\n"+win.document.documentElement.innerHTML+"\n</html>"
